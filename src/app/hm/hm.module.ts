@@ -5,7 +5,6 @@ import { IonicModule } from '@ionic/angular';
 import { ContactComponent } from '../contact/contact.component';
 
 
-
 @NgModule({
   declarations: [AboutComponent, ContactComponent],
   imports: [

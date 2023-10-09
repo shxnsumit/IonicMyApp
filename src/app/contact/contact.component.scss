@@ -7,9 +7,10 @@
     }
 }  
 
+
 h3,
 h4{
-    background-color: red;
+    background-color: rgb(97, 91, 91);
     font-family: 'Times New Roman', Times, serif;
     font-weight: 500;
 }
@@ -25,9 +26,10 @@ a{
 }
 
 .nav{
+    background-image: url("https://res.cloudinary.com/hamstech/images/w_2320,h_2560/f_auto,q_auto/v1617972566/Hamstech%20App/Title-Image1-2_804514106c3f9/Title-Image1-2_804514106c3f9.jpg?_i=AA");
+    background-size: cover;
+    height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
     animation-name: Fade;
     animation-duration: 2s;
@@ -37,15 +39,19 @@ a{
     padding: 40px;
     margin: 40px;
 }
+.nav h3{
+    padding: 20px 30px;
+    width: 20%;
+}
+.info h4{
+    width: 25%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 0px;
 
+}
 .info{
     padding: 20px;
     margin: 40px;
 
-}
-
-.nav{
-    background-image: url("https://res.cloudinary.com/hamstech/images/w_2320,h_2560/f_auto,q_auto/v1617972566/Hamstech%20App/Title-Image1-2_804514106c3f9/Title-Image1-2_804514106c3f9.jpg?_i=AA");
-    background-size: cover;
-    height: 100vh;
 }

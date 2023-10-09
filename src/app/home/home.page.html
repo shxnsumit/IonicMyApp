@@ -3,40 +3,400 @@
     <img src="https://img.freepik.com/premium-vector/online-shopping-logo-design-template-simple-minimal-style-mouse-cursor-with-bag-concepts_502185-289.jpg" alt="" height="50px" width="100px">
     <div class="nav">
       <ul>
-        <li class="heading" id="">Home</li>
+        <li class="heading"><a class="active" routerLink="#">Home</a></li>
         <li class="heading"><a routerLink="/about">About</a></li>
-      <li class="heading"><a routerLink="/contact">Contact</a></li>
-    </ul>
-        <input type="text" placeholder="search">      
-        <ion-button fill="opportunity" id="SearchButton" ><ion-icon name="search-outline">search</ion-icon></ion-button>  
-    </div>
- </div>
+        <li class="heading"><a routerLink="/contact">Contact</a></li>
+        <li class="heading"><a routerLink="/kids">kids</a></li>
+        <li class="heading"><a routerLink="/men">Men</a></li>
+        <li class="heading"><a routerLink="/women">Women</a></li>
+      </ul>
+        <input type="text" placeholder="search" name="search">      
+        <button type="button" id="SearchButton" ><ion-icon name="search-outline"></ion-icon></button> 
+        <button class="Login">
+          Login
+          <div class="hoverLogin">
+            <div class="triangle-up"></div>
+            <div class="profile">
+              <p>New Customer ?</p>
+              <a href="">Sign Up</a>
+            </div>
+            <div class="LoginMenu">
+              <div class="menuList">
+                <ion-icon name="person-circle-outline" id="large"></ion-icon>
+                <p>My Profile</p>
+              </div>
+              <div class="menuList">
+                <ion-icon name="cart-outline" id="large"></ion-icon>
+                <p>Order</p>
+              </div>
+              <div class="menuList">
+                <ion-icon name="clipboard-outline" id="large"></ion-icon>
+                <p>Wish List</p>
+              </div>
+              <div class="menuList">
+                <ion-icon name="gift-outline" id="large"></ion-icon>
+                <p>Rewards</p>
+              </div>
+              <div class="menuList">
+                <ion-icon name="card-outline" id="large"></ion-icon>
+                <p>Gift Cards</p>
+              </div>
+            </div>
+          </div>
 
+        </button>
+    </div> 
+  </div>
 <div class="front">
   <div class="frontContent">
     <h1>Enterprise <br>
       e-commerce, <br>
       simplified.</h1>
-      <ion-button fill="opportunity">Purchase</ion-button>
-      <ion-button fill="opportunity">Know More</ion-button>
-    </div>
-</div>
-
-
-<div class="something">
-  <div class="something-hidden">
-  <h1>We sell the best <br> 
-  Always Here For You.</h1>
-    <button type="button">Shop</button>
+          <ion-button id="Purchase" fill="outline" (click)="showContent()">
+            Purchase
+          </ion-button>   
+            <div *ngIf="message" class="toggleContent">
+              <div class="toggleMessage">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br>
+                   Laborum magnam debitis dolorem ab quasi nobis vero repellendus <br>
+                  </p>
+              </div>
+            </div>
+            <ion-button id="knowmore" fill="outline" (click)="showContent1()">
+              Know More
+            </ion-button>   
+              <div *ngIf="message1" class="toggleContent1">
+                <div class="toggleMessage1">
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br>
+                     shop more <br>
+                    </p>
+                </div>
+              </div>
   </div>
 </div>
 
 <div class="SoloLeveling">
   <h1>The New Arrival is Here.</h1>
   <p>Get Ready to get best deals and amazing offers. </p>
+  <button type="button"><a href="#">Shop</a></button>
 </div>
+
+<section id="shopping">
+  <h1>Just Arrived</h1>
+  <swiper-container class="swipe"
+  [slidesPerView] = "3"
+  [loop] = "true"
+  [modules]="swiperModules">
+    <swiper-slide class="swipeElement">
+      <ion-card>
+        <img alt="dress" src="https://images.unsplash.com/photo-1508742345712-0656a285ac27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80">
+      </ion-card>
+        <div class="swipecontent">
+          <h6>Red Gown</h6>
+          <p>₹4,999</p>
+        </div>
+  </swiper-slide>
+    <swiper-slide class="swipeElement">
+      <ion-card>
+        <img alt="dress" src="https://images.unsplash.com/photo-1596783047904-4000addd05cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80">
+    </ion-card>
+    <div class="swipecontent">
+      <h6>Party Gown</h6>
+      <p>₹3,699</p>
+    </div>
+    </swiper-slide>
+    <swiper-slide class="swipeElement">
+      <ion-card>
+        <img alt="dress" src="https://images.unsplash.com/photo-1613255832515-47e1775b441e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80">
+      </ion-card>
+      <div class="swipecontent">
+        <h6>Casual Jeans Jacket</h6>
+        <p>₹1,999</p>
+      </div>
+    </swiper-slide>
+    <swiper-slide class="swipeElement">
+      <ion-card>
+        <img alt="dress" src="https://images.unsplash.com/photo-1622122201640-3b34a4a49444?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80">
+      </ion-card>
+      <div class="swipecontent">
+        <h6>Rose Formal Dress </h6>
+        <p>₹4,199</p>
+      </div>
+    </swiper-slide>
+    <swiper-slide class="swipeElement">
+       <ion-card>
+        <img alt="dress" src="https://images.unsplash.com/photo-1603633247906-4746fea3141a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80">
+      </ion-card>
+      <div class="swipecontent">
+        <h6>X-men Uniform</h6>
+        <p>₹3,500</p>
+      </div>
+    </swiper-slide>
+    <swiper-slide class="swipeElement">
+     <ion-card>
+        <img alt="dress" src="https://images.unsplash.com/photo-1617551307353-1185d5efe9e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1911&q=80">
+      </ion-card>
+      <div class="swipecontent">
+        <h6>White Wedding Dress</h6>
+        <p>₹7,000</p>
+      </div>
+    </swiper-slide>
+    <swiper-slide class="swipeElement">
+      <ion-card>
+        <img alt="dress" src="https://images.unsplash.com/photo-1460493567047-d44949c477ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80">
+      </ion-card>
+      <div class="swipecontent">
+        <h6>Casual top & Tomboy Cape</h6>
+        <p>₹1,899</p>
+      </div>
+    </swiper-slide>
+    <swiper-slide class="swipeElement">
+       <ion-card size="small">
+        <img alt="dress" src="https://images.unsplash.com/photo-1542295669297-4d352b042bca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80">
+      </ion-card>
+      <div class="swipecontent">
+        <h6>Casual Red top</h6>
+        <p>₹3,999</p>
+      </div>
+    </swiper-slide>
+    <swiper-slide class="swipeElement">
+      <ion-card>
+        <img alt="dress" src="https://images.unsplash.com/photo-1631234764568-996fab371596?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80">
+      </ion-card>
+      <div class="swipecontent">
+        <h6>Balenciaga white wear</h6>
+        <p>₹9,999</p>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+</section>
+
+<section class="shoes">
+  <h4>Trending</h4>
+  <div class="OurShoes">
+    <div class="first">
+      <img src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_706,c_limit/15c41219-66d2-43dd-b65f-d37bcaba1285/nike-just-do-it.jpg" alt="loading...">
+      <div class="FirstText">
+        <h5>Nike Cortez <br> Do it First </h5>
+        <button type="button">Shop</button>
+      </div>
+    </div>
+    <div class="second">
+      <img src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_706,c_limit/dd40efdd-cb53-476d-87ed-091b470ff814/nike-just-do-it.png" alt="loading...">
+    </div>
+  </div>
+</section>
+
+<div class="shoesCards">
+  <h2>SHOES COLLECTION</h2>
+  <div class="shoeColl">
+    <div class="shoeRow">
+      <img src="https://static.nike.com/a/images/t_PDP_864_v1,f_auto,q_auto:eco/7107b5de-78e1-43f8-899e-232a88c8bd53/custom-nike-air-force-1-low-by-you.png" alt="">
+      <div class="shoesFun">
+        <span>NIKE</span>
+        <h5>Shoes</h5>
+        <div class="star">
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-half-outline"></ion-icon>
+        </div>
+        <h4>₹3,999</h4>
+      </div>
+        <a href=""><ion-icon name="cart-outline"></ion-icon></a>
+    </div>
+    <div class="shoeRow">
+      <img src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_2.0/h_669,c_limit/07874320-fba8-4712-8670-34df66141622/dunk-low-shoes-T4Ckpv.png" alt="">
+      <div class="shoesFun">
+        <span>NIKE</span>
+        <h5>Shoes</h5>
+        <div class="star">
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-half-outline"></ion-icon>
+        </div>
+        <h4>₹3,999</h4>
+      </div>
+        <a href=""><ion-icon name="cart-outline"></ion-icon></a>
+    </div>
+    <div class="shoeRow">
+      <img src="https://static.nike.com/a/images/t_PDP_864_v1,f_auto,q_auto:eco/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/56cf690b-120d-4d81-a7ae-cc09c34c2cb2/air-jordan-1-zoom-cmft-2-shoes-qn2GdG.png" alt="">
+      <div class="shoesFun">
+        <span>NIKE</span>
+        <h5>Shoes</h5>
+        <div class="star">
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-half-outline"></ion-icon>
+        </div>
+        <h4>₹3,999</h4>
+      </div>
+        <a href=""><ion-icon name="cart-outline"></ion-icon></a>
+    </div>
+    <div class="shoeRow">
+      <img src="https://static.nike.com/a/images/t_PDP_864_v1,f_auto,q_auto:eco/5868ed8e-bcba-464f-b26f-a0c8bd86bda6/dunk-low-retro-shoe-Q77g1d.png" alt="">
+      <div class="shoesFun">
+        <span>NIKE</span>
+        <h5>Shoes</h5>
+        <div class="star">
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-half-outline"></ion-icon>
+        </div>
+        <h4>₹3,999</h4>
+      </div>
+        <a href=""><ion-icon name="cart-outline"></ion-icon></a>
+    </div>
+    <div class="shoeRow">
+      <img src="https://static.nike.com/a/images/t_PDP_864_v1,f_auto,q_auto:eco/8dafdebb-863d-48a8-9224-614a192a3ef6/air-force-1-07-lv8-shoes-ggb31G.png" alt="">
+      <div class="shoesFun">
+        <span>NIKE</span>
+        <h5>Shoes</h5>
+        <div class="star">
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-half-outline"></ion-icon>
+        </div>
+        <h4>₹3,999</h4>
+      </div>
+        <a href=""><ion-icon name="cart-outline"></ion-icon></a>
+    </div>
+    <div class="shoeRow">
+      <img src="https://static.nike.com/a/images/t_PDP_864_v1,f_auto,q_auto:eco/357cf26a-26a1-4ff0-8cde-d46249051eff/pegasus-trail-4-gore-tex-waterproof-trail-running-shoes-tVWltb.png" alt="">
+      <div class="shoesFun">
+        <span>NIKE</span>
+        <h5>Shoes</h5>
+        <div class="star">
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-half-outline"></ion-icon>
+        </div>
+        <h4>₹3,999</h4>
+      </div>
+        <a href=""><ion-icon name="cart-outline"></ion-icon></a>
+    </div>
+    <div class="shoeRow">
+      <img src="https://static.nike.com/a/images/t_PDP_864_v1,f_auto,q_auto:eco/07ad554d-077a-46c1-aa96-167ba177901d/custom-nike-dunk-low-by-you.png" alt="">
+      <div class="shoesFun">
+        <span>NIKE</span>
+        <h5>Shoes</h5>
+        <div class="star">
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-half-outline"></ion-icon>
+        </div>
+        <h4>₹3,999</h4>
+      </div>
+        <a href=""><ion-icon name="cart-outline"></ion-icon></a>
+    </div>
+    <div class="shoeRow">
+      <img src="https://static.nike.com/a/images/t_PDP_864_v1,f_auto,q_auto:eco/9c9308fc-1651-40b2-9f2e-d85697d05027/dunk-low-retro-shoes-BDKXTS.png" alt="">
+      <div class="shoesFun">
+        <span>NIKE</span>
+        <h5>Shoes</h5>
+        <div class="star">
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-half-outline"></ion-icon>
+        </div>
+        <h4>₹3,999</h4>
+      </div>
+        <a href=""><ion-icon name="cart-outline"></ion-icon></a>
+    </div>
+    <div class="shoeRow">
+      <img src="https://static.nike.com/a/images/t_PDP_864_v1,f_auto,q_auto:eco/e6da41fa-1be4-4ce5-b89c-22be4f1f02d4/air-force-1-07-shoes-GjGXSP.png" alt="">
+      <div class="shoesFun">
+        <span>NIKE</span>
+        <h5>Shoes</h5>
+        <div class="star">
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-half-outline"></ion-icon>
+        </div>
+        <h4>₹3,999</h4>
+      </div>
+        <a href=""><ion-icon name="cart-outline"></ion-icon></a>
+    </div>
+    <div class="shoeRow">
+      <img src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_2.0/h_669,c_limit/lkwfba88t6qix4qxaavi/vomero-5-shoes-qZG4RJ.png" alt="">
+      <div class="shoesFun">
+        <span>NIKE</span>
+        <h5>Shoes</h5>
+        <div class="star">
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-half-outline"></ion-icon>
+        </div>
+        <h4>₹3,999</h4>
+      </div>
+        <a href=""><ion-icon name="cart-outline"></ion-icon></a>
+    </div>
+    <div class="shoeRow">
+      <img src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_2.0/h_669,c_limit/c3393350-4ea7-44bb-a3fd-dee4b7376884/p-6000-shoes-6l9ww7.png" alt="">
+      <div class="shoesFun">
+        <span>NIKE</span>
+        <h5>Shoes</h5>
+        <div class="star">
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-half-outline"></ion-icon>
+        </div>
+        <h4>₹3,999</h4>
+      </div>
+        <a href=""><ion-icon name="cart-outline"></ion-icon></a>
+    </div>
+    <div class="shoeRow">
+      <img src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_2.0/w_669,c_limit/3052daa5-8ea2-4e10-80fc-a8a73122f56c/cortez-se-shoes-Pfr5Qh.png" alt="">
+      <div class="shoesFun">
+        <span>NIKE</span>
+        <h5>Shoes</h5>
+        <div class="star">
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-half-outline"></ion-icon>
+        </div>
+        <h4>₹3,999</h4>
+      </div>
+        <a href=""><ion-icon name="cart-outline"></ion-icon></a>
+    </div>
+  </div>
+</div>
+
+<footer style="display: flex;align-items: center; justify-content: center;">
+  <p>&copy; 2023 Your Company Name. All Rights Reserved.</p>
+</footer>
+
+<section class="socialHandles">
+  <div class="social">
+    <a href="https://www.instagram.com/sumitshxn/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+    <a href="https://twitter.com/login?lang=en" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+    <a href="https://www.facebook.com/" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+    <a href="https://in.pinterest.com/" target="_blank"><ion-icon name="logo-pinterest"></ion-icon></a>
+
+  </div>
+</section>
 </ion-content>
-
-
-
 

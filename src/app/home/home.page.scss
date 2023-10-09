@@ -6,15 +6,19 @@
     box-sizing: border-box;
     font-family: 'poppins', sans-serif;
 }
-
+a{
+    text-decoration: none;
+    color: inherit;
+}
 .top{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     position: sticky;
     top: 0;
     z-index: 999;
     background: #000000;
+    box-shadow: 0 4px 2px -2px rgba(194, 235, 12, 0.2);
 }
 
 .nav{
@@ -30,37 +34,124 @@ ul{
 }
 
 ul li{
-    margin: 0 50px;
+    margin: 0 10px;
+    flex-grow: 4;
+    position: relative;
 }
 li a{
     text-decoration: none;
     color: inherit;
 }
-li:hover{
-   color: red;
-    transition: .1s;
+
+li a:hover,
+li a.active{
+    color: aquamarine;
+    transition: .3s;
+}
+
+li .active::after,
+li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: aquamarine;
+    position: absolute;
+    bottom: 14px;
+    left: 18px;
 }
 .heading{
     padding: 20px;
 }
 
-input{
+.nav input{
     align-items: center;
     text-align: center;
     width: 20pc;
-    margin: 0 10px;
+    margin: 10px;
 }
+
 #SearchButton{
-    width: 4rem;
-    height: 2rem;
+    background-color: black;
+    font-size: 20px;
+    padding: 8px 20px;
+    border-radius: 7px;
 }
 
-#SearchButton ion-icon{
-    border-radius: 6rem;
-    background: none;
-    font-size: 2rem;
+#SearchButton:hover{
+    background-color: #2D3037;
+}
+.Login{
+    padding: 10px 20px;
+    margin-left: 60px;
+    border-radius: 7px;
+    background-color: #000000;
 }
 
+.Login:hover{
+    background-color: #2D3037;    
+}
+.Login:hover .hoverLogin{
+    display: flex;
+}
+.hoverLogin{
+    position: absolute;
+    top: 64px;
+    height: 350px;
+    width: 230px;
+    margin-left: -60px;
+    background-color: rgb(100, 96, 96);
+    box-shadow: -5px 5px 7px rgba(0, 0, 0, 0.2),
+    5px 5px 10px rgba(0, 0, 0, 0.2);
+    border-top:1px solid #757272;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    border-radius: 20px;
+}
+.triangle-up{
+    position: relative;
+    height: 0;
+    width: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 18px solid rgb(100, 96, 96);
+    top: -17px;
+    margin-right: 80px;
+}
+.profile{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.profile a{
+    color: royalblue;
+}
+
+.profile a:hover{
+    text-decoration: underline;
+}
+
+.LoginMenu{
+    width: 200px;
+    margin-top: 10px;
+}
+
+.menuList{
+    display: flex;
+    padding: 15px 0px;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.menuList #large{
+    font-size: 25px;
+    color: royalblue;
+}
+.menuList p{
+    padding-left: 20px;
+}
 .front{
     background-color: #2D3037;
     background-image: url(https://www.hdwallpapers.in/download/red_wedding_saree_photoshoot_girl_model_women_pose_hd_girls-HD.jpg);
@@ -81,36 +172,46 @@ input{
     font-size: 5rem;
 }
 
-
-.frontContent ion-button{
-    padding: 10px;
+#Purchase{
+    position: relative;
+    color: #d1c5c5;
 }
-
-.something{
+.toggleContent{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 60vh;
-    background-color: rgb(54, 102, 145);
-    z-index: 1;
-    margin-top: 20px;
+    position: absolute;
+    height: 100px;
+    width: 400px;
+    background-color: rgb(0, 0, 0);
+    left: 14px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+.toggleMessage{
+    position: relative;
+    margin-top: 20px; 
 }
 
-.something h1{
-    font-size: 5rem;
+#knowmore{
+    position: relative;
+    margin: 0 20px;
+    color: #d1c5c5;
 }
 
-.something button{
-    font-size: 20px;
-    padding: 10px 40px;
-    background: #000000;
-    border-radius: 50px;
-    margin-left: 40%;
-    margin-top: 40px;
+.toggleContent1{
+    display: flex;
+    position: absolute;
+    height: 100px;
+    width: 400px;
+    background-color: rgb(0, 0, 0);
+    left: 14px;
+    margin-top: 10px;
+    overflow: hidden;
 }
-.something button:hover{
-    background-color: #2D3037;
+.toggleMessage1{
+    position: relative;
+    margin-top: 20px; 
 }
+
 
 .SoloLeveling{
     display: flex;
@@ -128,3 +229,135 @@ input{
 .SoloLeveling p{
     font-size: 20px;
 } 
+
+.SoloLeveling button{
+    font-size: 20px;
+    padding: 10px 40px;
+    background: #000000;
+    border-radius: 50px;
+    margin-top: 40px;
+}
+
+.SoloLeveling button:hover{
+    background-color: #2D3037;
+}
+#shopping{
+    height: 100vh;
+}
+swiper-container{
+    // height: 100%;
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0px;
+    height: 80vh;
+}
+swiper-slide {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    flex-shrink: 0;
+    // align-items: center;
+    // justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  ion-card{
+    margin: 10px;
+    padding: 5px;
+    height: 100%;
+    width: 100%;
+  }
+.swipecontent{
+    display: flex;
+    justify-content: space-between;
+}
+
+.swipecontent p{
+    padding: 0 20px;
+    font-size: 15px;   
+}
+
+.swipecontent h6{
+    padding: 0 20px; 
+    font-size: 20px;   
+}
+
+.OurShoes{
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+.first img{
+    height: 94.5%;
+
+}
+
+.FirstText{
+    top: 73%;
+    position: absolute;
+    z-index: 1;
+    padding: 0 40px;
+}
+
+.FirstText button{
+    background-color: #000000;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-top: 30px;
+    transition: background-color .3s;
+}
+
+.FirstText button:hover{
+    background-color: #37383a;
+}
+
+.shoesCards{
+    text-align: center;
+}
+.shoeColl{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.shoeRow{
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d9;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(26, 25, 25, 0.02);
+    margin: 15px 0;
+    transition: 0.3s ease;
+
+}
+.shoeRow:hover{
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
+}
+
+.shoeRow img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+.shoeRow .shoesFun{
+    text-align: start;
+}
+
+.social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px; 
+}
+
+.social a{
+    padding-left: 20px;
+    font-size: 30px;
+}
