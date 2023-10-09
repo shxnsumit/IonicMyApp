@@ -1,0 +1,51 @@
+@keyframes Fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}  
+
+h3,
+h4{
+    background-color: red;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+}
+
+p{
+    font-family: cursive;
+    font-weight: 400;
+}
+
+a{
+   text-decoration: none; 
+   color: inherit;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    animation-name: Fade;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    padding: 40px;
+    margin: 40px;
+}
+
+.info{
+    padding: 20px;
+    margin: 40px;
+
+}
+
+.nav{
+    background-image: url("https://res.cloudinary.com/hamstech/images/w_2320,h_2560/f_auto,q_auto/v1617972566/Hamstech%20App/Title-Image1-2_804514106c3f9/Title-Image1-2_804514106c3f9.jpg?_i=AA");
+    background-size: cover;
+    height: 100vh;
+}
