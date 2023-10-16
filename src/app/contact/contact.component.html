@@ -1,20 +1,27 @@
 <ion-header>
   <ion-toolbar>
-    Contact
+    Contact details
   </ion-toolbar>
 </ion-header>
+
+
 <ion-content>
-  <div class="nav">
-    <h3>INFORMATION</h3>
-    <p>We are a service providing company meaning we provide service, <br> to people that gives them joy or anykind of comfort that makes their job easier.</p>
-    <section class="info">
-    <h4>OUR CONTACT INFO</h4>
-    <address>
-      <p>Sumit kumar</p>
-      <p>Kuleed, Near FCI</p>
-      <p>kishtwar, 182204</p>
-      <p><a href="tel:+916006477163">600-647-7163</a></p>
-    </address>
+  <section class="contact">
+    <h2>Details</h2>
+    <form action="/form/submit" method="post">
+      <label for="name">Name</label>
+      <input type="text" placeholder="First Name" required>
+      <label for="lastname">Last Name</label>
+      <input type="text" placeholder="Last Name" required>
+      <label for="email">Email</label>
+      <input type="Email" placeholder="example@123" required>
+      <label for="Number">Mobile Number</label>
+      <input type="tel" placeholder="Phone number" required>
+      <label for="password">Password</label>
+      <input type="password" placeholder="Password" required>
+      <label for="name">Repeat Password</label>
+      <input type="passwork" placeholder="password" required>
+      <button type="submit">submit</button>
+    </form>
   </section>
-</div>
 </ion-content>
